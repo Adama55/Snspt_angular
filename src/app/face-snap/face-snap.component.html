@@ -4,6 +4,9 @@
     <img [src]="imagUrl" [alt]="description">
     <p>{{description}}</p>
     <p> contenu crée depuis le {{creatDate}}</p>
-    <p>{{snaps}} j'aimes</p>
+    <p>
+        <button (click)="onSnaps()">{{textLike}}</button>
+        {{snaps}} j'aimes
+    </p>
 </div>
     

@@ -11,6 +11,7 @@ export class FaceSnapComponent implements OnInit {
   creatDate!:Date;
   snaps!: number;
   imagUrl!:string;
+  textLike!:string;
   
   ngOnInit(){
     this.title ='Zaban';
@@ -18,5 +19,18 @@ export class FaceSnapComponent implements OnInit {
     this.creatDate= new Date() ;
     this.snaps = 6;
     this.imagUrl="https://www.webonary.org/dioula-bf/wp-content/blogs.dir/339/files/images/original/saba%20senegalensis.jpg"
+    this.textLike="j'ai aimé";
+  }
+
+  onSnaps() {
+    if(this.textLike === "j'ai aimé"){
+      this.snaps++;
+      this.textLike="je ne l'aime plus"
+
+    }
+    else{
+      this.snaps--;
+      this.textLike="j'ai aimé"
+    }
   }
 }
