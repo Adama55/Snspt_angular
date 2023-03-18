@@ -1,12 +1,13 @@
 <div class="face-snap-card">
     <p>face-snap works!</p>
-    <h1>{{title}} </h1>
-    <img [src]="imagUrl" [alt]="description">
-    <p>{{description}}</p>
-    <p> contenu crée depuis le {{creatDate}}</p>
+    <h1>titre</h1>
+    <img [src]="faceSnap.imagUrl" [alt]="faceSnap.description">
+    <p>{{faceSnap.description}}</p>
+    <p> je verifie</p>
+    <p> contenu crée depuis le {{faceSnap.creatDate}}</p>
     <p>
         <button (click)="onSnaps()">{{textLike}}</button>
-        {{snaps}} j'aimes
+        {{faceSnap.snaps}} j'aimes
     </p>
 </div>
     

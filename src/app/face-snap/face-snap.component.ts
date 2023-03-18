@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { FaceSnap } from '../models/face-snap.model';
 
 @Component({
   selector: 'app-face-snap',
@@ -6,30 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./face-snap.component.scss']
 })
 export class FaceSnapComponent implements OnInit {
-  title!: string;
-  description!: string;
-  creatDate!:Date;
-  snaps!: number;
-  imagUrl!:string;
+  @Input() faceSnap!: FaceSnap;
+
   textLike!:string;
   
   ngOnInit(){
-    this.title ='Zaban';
-    this.description ='fruit saisonier de de l afrique de louest ';
-    this.creatDate= new Date() ;
-    this.snaps = 6;
-    this.imagUrl="https://www.webonary.org/dioula-bf/wp-content/blogs.dir/339/files/images/original/saba%20senegalensis.jpg"
-    this.textLike="j'ai aimé";
+      this.textLike="j'ai aimé";
   }
 
   onSnaps() {
     if(this.textLike === "j'ai aimé"){
-      this.snaps++;
+      this.faceSnap.snaps++;
       this.textLike="je ne l'aime plus"
 
     }
     else{
-      this.snaps--;
+      this.faceSnap.snaps--;
       this.textLike="j'ai aimé"
     }
   }
