@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
       'fruit saisonier de de l afrique de louest ',
        new Date(),
        0,
-      "https://www.webonary.org/dioula-bf/wp-content/blogs.dir/339/files/images/original/saba%20senegalensis.jpg"
+      'https://www.webonary.org/dioula-bf/wp-content/blogs.dir/339/files/images/original/saba%20senegalensis.jpg'
     );
   }
 }
